@@ -1,0 +1,10 @@
+* {
+  border: 1px solid red;
+  margin: auto;
+}
+
+.body {
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
