@@ -10,9 +10,6 @@ type props = {
 };
 
 function Card(props: props) {
-  // useEffect(() => {
-  //   console.log(props);
-  // }, [props]);
   const Navigate = useNavigate();
 
   const { username, caption, image, createdAt, _id } = props;
@@ -26,7 +23,6 @@ function Card(props: props) {
       <p className="createdAt">{createdAt}</p>
       <button onClick={() => Navigate(`/HalamanDetail/${_id}`)}>DETAIL</button>
       <button onClick={() => Navigate(`/HalamanUpdate/${_id}`)}>UPDATE</button>
-      {/* <button onClick={() => Navigate(`/HalamanDetail/${_id}`)}>HAPUS</button> */}
     </div>
   );
 }

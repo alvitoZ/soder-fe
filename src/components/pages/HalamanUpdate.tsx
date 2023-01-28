@@ -14,7 +14,7 @@ function HalamanUpdate() {
   const [image, setImage] = useState<string>("");
   const [prevImage, setPrevImage] = useState<string>("");
   const [imagePreview, setImagePreview] = useState<string>("");
-  // const [username, setUsername] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
 
   const onUpload = (e: any) => {
     const file: any = e.target.files[0];
@@ -25,7 +25,7 @@ function HalamanUpdate() {
   const data: any = new FormData();
   data.append("image", image);
   data.append("caption", caption);
-  // data.append("username", username);
+  data.append("username", username);
 
   const onSubmit = () => {
     // console.log(username);
@@ -46,10 +46,10 @@ function HalamanUpdate() {
 
   useEffect(() => {
     axios.get(`http://localhost:3001/api/v1/blog/${id}`).then((res) => {
-      // console.log(res.data.data);
+      console.log(res.data.data);
       setPrevImage(res.data.data.image);
       setPrevCaption(res.data.data.caption);
-      // setUsername(res.data.data.username);
+      setUsername(res.data.data.username);
     });
   }, []);
 

@@ -18,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Fetch />} />
+          <Route path="/afterDelete" element={<Fetch />} />
           <Route path="*" element={<h1>404</h1>} />
           <Route path="/register" element={<HalamanRegister />} />
           <Route path="/login" element={<HalamanLogin />} />
